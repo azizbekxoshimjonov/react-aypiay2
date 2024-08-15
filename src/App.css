@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul,ol{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+.container{
+ max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 100px;
+  gap: 25px;
+}
+
+.list__item {
+  margin-bottom: 50px;
+  box-shadow: 0 0 20px 5px #eee;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }
+}
+
+.title {
+  font-size: 15px;
+  width: 200px;
+}
+
+.info {
+  padding-top: 40px;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+.list__ong{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  cursor: pointer;
+}
+.loopa{
+  width: 20px;
+  height: 20px;
+}
+.search{
+  display: flex;
+  width: 285px;
+  height: 48px;
+  margin-top: -15px;
+  padding-left: 16px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #efefef;
+  border-radius: 71px;
+  box-sizing: border-box;
+  input{
+    width: 100%;
+    border: none;
+    color: #70737c;
+    font-family: Lexend;
+    font-size: 14px;
+    outline: none;
+  }
+}
+.logo{
+  width: 100px;
+  height: 60px;
+}
+.yurak__btn2{
+  color:red;
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+  float: right;
+  margin-top: 10px;
+  margin-left: 200px;
+}
+.yurak__btn1{
+  border: none;
+  background-color: transparent;
+  
+}
+.yurak__modal{
+  border: 1px solid white;
+  
+}
+.x__btn{
+  margin-left: 488px;
+  margin-top: 14px;
+  border: none;
+  background-color: transparent;
+}
+.modal__img{
+  width: 70px;
+  height: 70px;
+  margin-top: 25px;
+}
+.item__tile{
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 25px;
+}
+.item__price{
+  margin-left: 25px;
+}
+.modal-ichi{
+  display: flex;
+  align-items: center;
+}
+.buttons{
+  margin-top: 25px;
+}
+.close__btn{
+  width: 70px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(218, 218, 74);
+  color: white;
+}
+.clear__btn{
+  width: 70px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  background-color: green;
+  color: white;
+  margin-left: 20px;
+}
