@@ -50,3 +50,15 @@
         font-weight: 300;
     }
 }
+@media (max-width:345px){
+    .detal__page{
+        width: 200px;
+        height: 600px;
+    }
+}
+@media (max-width:280px){
+    .detal__page{
+        width: 200px;
+        height: 600px;
+    }
+}

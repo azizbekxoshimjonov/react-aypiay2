@@ -18,7 +18,7 @@ function Home() {
   const [localData, setLocalData] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Fetch products on mount
+
   useEffect(() => {
     if (products.length > 0) {
       setInitialProducts(products);
@@ -26,14 +26,14 @@ function Home() {
     }
   }, [products]);
 
-  // Pagination logic
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredProducts.slice(indexOfFirstItem, indexOfLastItem);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Load localStorage data on mount
+
   useEffect(() => {
     const savedData = localStorage.getItem('localData');
     if (savedData) {
@@ -41,7 +41,7 @@ function Home() {
     }
   }, []);
 
-  // Handle love action
+
   const handleLove = (product) => {
     let updatedLocalData = [...localData];
     if (updatedLocalData.find((item) => item.id === product.id)) {
@@ -53,13 +53,12 @@ function Home() {
     setLocalData(updatedLocalData);
   };
 
-  // Clear loved products
+
   const clearLocalData = () => {
     localStorage.removeItem('localData');
     setLocalData([]);
   };
 
-  // Handle search
   const handleSearch = (value) => {
     setInputValue(value);
     const searchResult = initialProducts.filter(item =>
@@ -82,16 +81,16 @@ function Home() {
     borderRadius: '8px',
     overflow: 'auto',
     scrollbarWidth: 'none',
-    minWidth: '300px', 
-    minHeight: '300px', 
-    '@media (max-width: 790px)': { // Planshetlar uchun
+    minWidth: '300px',
+    minHeight: '300px',
+    '@media (max-width: 790px)': {
       width: '100px',
       height: '100px',
-      right:'50%'
+      right: '50%'
     },
   };
-  
-  
+
+
 
   return (
     <div className="App">
@@ -112,8 +111,8 @@ function Home() {
             </button>
           </ul>
           <button className='burger-menu' onClick={() => setMenuOpen(!menuOpen)}>
-              ☰
-            </button>
+            ☰
+          </button>
 
           <div className='search'>
             <img className='loopa' src={loopa} alt="Search" />
@@ -126,28 +125,31 @@ function Home() {
           </div>
         </header>
         <div className="respons__div">
-        <ul className='nav__list'>
-          {currentItems.map((item, index) => (
-            <li key={index} className='d-flex align-items-center list__item'>
-              <div>
-                <button className='yurak__btn2' onClick={() => handleLove(item)}>
-                  <i className={`yurakcha bi bi-heart${localData.find((product) => product.id === item.id) ? '-fill' : ''}`}></i>
-                </button>
-              </div>
-              <img width={100} height={170} src={item.image} alt={item.title} />
-              <h2 className='title'>{item.title}</h2>
-              <h3>{item.price}$</h3>
-              <p>{item.category}</p>
-              <li className='btn btn-info text-red mb-4 more__btn'>
-                <Link className='link__title' to="/Detalpage" state={{ product: item }}>More</Link>
+          <ul className='nav__list'>
+            {currentItems.map((item, index) => (
+              <li key={index} className='d-flex align-items-center list__item'>
+                <div>
+                  <button className='yurak__btn2' onClick={() => handleLove(item)}>
+                    <i className={`yurakcha bi bi-heart${localData.find((product) => product.id === item.id) ? '-fill' : ''}`}></i>
+                  </button>
+                </div>
+
+                <img className='image__item' width={100} height={170} src={item.image} alt={item.title} />
+                <h2 className='title'>{item.title}</h2>
+                <h3>{item.price}$</h3>
+                <p>{item.category}</p>
+                <li className='btn btn-info text-red mb-4 more__btn'>
+                  <Link className='link__title' to="/Detalpage" state={{ product: item }}>More</Link>
+                </li>
+
+
               </li>
-            </li>
-          ))}
-        </ul>
+            ))}
+          </ul>
 
         </div>
 
-    
+
 
         <div className='pages__btn'>
           <nav className='pagination__bar'>
@@ -177,7 +179,10 @@ function Home() {
               {localData.length > 0 ? (
                 localData.map((item) => (
                   <div className="modal-ichi" key={item.id}>
-                    <img className='modal__img rek__img' src={item.image} alt={item.title} />
+                    <div>
+                      <img className='modal__img rek__img' src={item.image} alt={item.title} />
+                    </div>
+
                     <div className='summa__title'>
                       <span className='item__tile'>{item.title}</span> <br />
                       <span className='item__price'>${item.price}</span>

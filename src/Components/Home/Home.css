@@ -30,7 +30,16 @@ a {
   gap: 25px;
   display: flex;
   flex-wrap: wrap;
+  img{
+    background-color: transparent;
+  }
+  h3{
+    background-color: yellow;
+    border-radius: 8px;
+  }
 }
+
+
 
 .list__item {
   margin-bottom: 50px;
@@ -41,6 +50,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 
   img {
     padding-bottom: 20px;
@@ -227,6 +237,20 @@ header {
     display: block;
   }
 }
+.modal__img{
+  height: 130px;
+ }
+  .item__tile{
+    font-size: 10px;
+    font-weight: 300;
+    margin-top: 10px;
+    display: flex;
+  }
+  .item__price{
+    font-size: 10px;
+    font-weight: 100;
+    background-color: yellow;
+  }
 
 @media (max-width:1024px) {
   .nav__list {
@@ -237,6 +261,20 @@ header {
     display: block;
   }
 }
+.modal__img{
+  height: 130px;
+ }
+  .item__tile{
+    font-size: 10px;
+    font-weight: 300;
+    margin-top: 10px;
+    display: flex;
+  }
+  .item__price{
+    font-size: 10px;
+    font-weight: 100;
+    background-color: yellow;
+  }
 
 @media (max-width:790px) {
   .burger-menu {
@@ -245,13 +283,31 @@ header {
   .list__ong {
     display: none;
   }
+ .modal-ichi{
+  display: flex;
+  align-items: center;
+ }
+ .modal__img{
+  height: 130px;
+ }
+  .item__tile{
+    font-size: 10px;
+    font-weight: 300;
+    margin-top: 10px;
+    display: flex;
+  }
+  .item__price{
+    font-size: 10px;
+    font-weight: 100;
+    background-color: yellow;
+  }
   
   .list__ong.open {
     display: block;
     position: absolute;
-    top: 50px; /* Burger menu pozitsiyasi moslashtiriladi */
+    top: 50px; 
     left: 0;
-    background-color: white; /* or background you need */
+    background-color: white; 
     width: 100%;
   }
   .yurak__modal{
@@ -265,13 +321,13 @@ header {
     display: block;
     position: absolute;
     top: 90px; 
-    left: 50px;/* Pozitsiyani sozlang *//* Ekranning o'ng tomonida ochilishi uchun */
-    width: 200px; /* Kichikroq kenglik bering */
+    left: 50px;
+    width: 200px; 
     height: auto;
-    background-color: white; /* Fon rangini moslang */
+    background-color: white;
     padding: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* boshqa elementlardan ustun bo‘lishi uchun */
+    z-index: 1000; 
   }
   .nav__list {
     display: flex;
@@ -285,6 +341,49 @@ header {
   .pages__btn{
     margin: 0 auto;
     display: block;
+  }
+  
+}
+@media (max-width:345px){
+  .logo{
+    margin-left: -25px;
+  }
+  .nav__list{
+    margin-left: -20px;
+  }
+  .list__ong.open {
+    display: block;
+    position: absolute;
+    top: 90px; 
+    left: 50px;
+    width: 25px; 
+    height: auto;
+    background-color: white; 
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+  }
+  
+}
+
+@media (max-width:280px){
+  .logo{
+    margin-left: -25px;
+  }
+  .nav__list{
+    margin-left: -20px;
+  }
+  .list__ong.open {
+    display: block;
+    position: absolute;
+    top: 90px; 
+    left: 50px;
+    width: 25px; 
+    height: auto;
+    background-color: white; 
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
   }
   
 }
